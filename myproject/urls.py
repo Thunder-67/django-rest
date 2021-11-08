@@ -20,7 +20,9 @@ from webapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.categorylist.as_view()),
+    path('categories/', views.categorylist.as_view()),
     path('meals/', views.meallist.as_view()),
+    
+    path('search/', views.searchlist.as_view()),
 ]
 urlpatterns= format_suffix_patterns(urlpatterns)
